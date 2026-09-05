@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Public WAF and IAM-authenticated application on Scaleway Serverless Containers</title>
+  <desc id="desc">A browser reaches a public custom domain, which routes to a public WAF container. The WAF uses a generated Scaleway serverless endpoint and an IAM credential to reach an authenticated application container.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#506a85"/></marker>
+    <style>.title{font:700 28px system-ui,-apple-system,sans-serif;fill:#17324d}.label{font:600 19px system-ui,-apple-system,sans-serif;fill:#17324d}.small{font:15px system-ui,-apple-system,sans-serif;fill:#47627c}.box{stroke:#506a85;stroke-width:2;rx:14}.flow{stroke:#506a85;stroke-width:3;fill:none;marker-end:url(#arrow)}.note{font:600 13px system-ui,-apple-system,sans-serif;fill:#226b5b}</style>
+  </defs>
+  <rect width="1200" height="520" fill="#f8fbff"/>
+  <text x="60" y="58" class="title">Public WAF, IAM-authenticated application</text>
+  <rect x="415" y="100" width="725" height="350" rx="22" fill="#eef6ff" stroke="#78a7d1" stroke-width="2"/>
+  <text x="450" y="140" class="label">Scaleway Serverless Containers</text>
+  <rect x="60" y="225" width="240" height="115" class="box" fill="#fff"/>
+  <text x="117" y="270" class="label">Browser</text><text x="93" y="302" class="small">app.example.com</text>
+  <rect x="465" y="205" width="245" height="160" class="box" fill="#e7f7f0"/>
+  <text x="512" y="253" class="label">Public WAF</text><text x="495" y="286" class="small">NGINX + WAF rules</text><text x="493" y="317" class="small">origin token held here</text>
+  <rect x="875" y="205" width="225" height="160" class="box" fill="#fff4e5"/>
+  <text x="915" y="253" class="label">Private app</text><text x="894" y="286" class="small">public provider endpoint</text><text x="911" y="317" class="small">IAM token required</text>
+  <path d="M 301 282 L 464 282" class="flow"/><text x="327" y="258" class="note">public HTTPS</text>
+  <path d="M 711 282 L 874 282" class="flow"/><text x="735" y="246" class="note">generated endpoint</text><text x="750" y="264" class="note">HTTPS + SNI</text>
+</svg>
