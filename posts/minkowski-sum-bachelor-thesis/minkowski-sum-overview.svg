@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
-  <title id="title">A Minkowski sum as translated copies of a shape</title>
-  <desc id="desc">A blue triangle and an orange square combine to form a larger polygon. The equation A plus B is shown above.</desc>
-  <rect width="960" height="420" rx="18" fill="#faf9f6"/>
-  <text x="480" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="27" font-weight="700" fill="#222">A ⊕ B = {a + b | a ∈ A, b ∈ B}</text>
-  <g stroke="#175c50" stroke-width="2" fill="none" opacity=".25">
-    <path d="M150 312 L265 118 L365 312 Z"/>
-    <path d="M190 312 L305 118 L405 312 Z"/>
-    <path d="M230 312 L345 118 L445 312 Z"/>
-  </g>
-  <path d="M150 312 L265 118 L365 312 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
-  <text x="270" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#175c50">A</text>
-  <g transform="translate(54 22)"><rect x="0" y="0" width="82" height="82" fill="#f2c9a5" stroke="#b75d28" stroke-width="4"/><text x="41" y="132" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#b75d28">B</text></g>
-  <path d="M505 214 H588" stroke="#6b6b65" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="547" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#6b6b65">add every vector</text>
-  <path d="M625 320 L625 120 L830 120 L880 225 L830 320 Z" fill="#f5dfc9" stroke="#b75d28" stroke-width="4"/>
-  <path d="M625 320 L625 120" stroke="#175c50" stroke-width="6"/><path d="M625 120 L830 120" stroke="#175c50" stroke-width="6"/>
-  <text x="750" y="368" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#b75d28">A ⊕ B</text>
-  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6b6b65"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="title desc">
+  <title id="title">Minkowski sum of a triangle and a square</title>
+  <desc id="desc">A triangle and an axis-aligned square combine into a six-sided polygon. Every edge direction from both input shapes appears on the boundary of the sum.</desc>
+  <rect width="880" height="420" rx="18" fill="#faf9f6"/>
+  <text x="440" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="27" font-weight="700" fill="#222">A ⊕ B = {a + b | a ∈ A, b ∈ B}</text>
+
+  <path d="M55 315 L155 125 L255 315 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
+  <text x="155" y="356" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#175c50">A</text>
+
+  <text x="300" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="38" fill="#6b6b65">⊕</text>
+
+  <rect x="345" y="210" width="70" height="70" fill="#f2c9a5" stroke="#b75d28" stroke-width="4"/>
+  <text x="380" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#b75d28">B</text>
+
+  <text x="465" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="38" fill="#6b6b65">=</text>
+
+  <path d="M525 315 L625 125 L695 125 L795 315 L795 385 L525 385 Z" fill="#e9dfcd" stroke="#175c50" stroke-width="4"/>
+  <path d="M625 125 H695 M795 315 V385 M795 385 H525 M525 385 V315" fill="none" stroke="#b75d28" stroke-width="5"/>
+  <text x="660" y="355" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#493f36">A ⊕ B</text>
 </svg>

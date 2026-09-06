@@ -1,21 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
-<title id="title">The convolution method pipeline</title><desc id="desc">Two polygon boundaries generate translated edge segments, which form a convolution arrangement. Faces are labelled by winding number and positive faces are extracted as the Minkowski sum.</desc>
-<rect width="960" height="430" rx="18" fill="#faf9f6"/>
-<g font-family="system-ui,sans-serif" fill="#222" text-anchor="middle">
-<text x="120" y="38" font-size="21" font-weight="700">1 · input</text>
-<text x="480" y="38" font-size="21" font-weight="700">2 · convolution</text>
-<text x="840" y="38" font-size="21" font-weight="700">3 · extract</text>
-</g>
-<g transform="translate(45 83)" stroke="#175c50" stroke-width="4" fill="#d9eee9"><path d="M0 150 L50 20 L155 50 L125 160 L55 190 Z"/></g>
-<g transform="translate(180 115)" stroke="#b75d28" stroke-width="4" fill="#f5dfc9"><path d="M0 0 H90 V90 H0 Z"/></g>
-<path d="M295 190 H350" stroke="#6b6b65" stroke-width="3" marker-end="url(#arrow)"/>
-<g stroke-width="3" fill="none" opacity=".9"><path d="M385 290 L390 95 L560 110 L530 285 Z" stroke="#175c50"/><path d="M360 260 L490 90 L610 210 L465 330 Z" stroke="#b75d28"/><path d="M380 180 L570 290 M420 315 L590 120 M360 260 L610 210" stroke="#8a8174"/></g>
-<g fill="#fff" stroke="#6b6b65" stroke-width="1"><circle cx="391" cy="95" r="5"/><circle cx="560" cy="110" r="5"/><circle cx="530" cy="285" r="5"/><circle cx="465" cy="330" r="5"/></g>
-<text x="485" y="385" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#6b6b65">all pairwise edge interactions</text>
-<path d="M640 210 H690" stroke="#6b6b65" stroke-width="3" marker-end="url(#arrow)"/>
-<path d="M730 300 L730 110 L875 110 L915 205 L875 300 Z" fill="#f5dfc9" stroke="#175c50" stroke-width="4"/>
-<path d="M730 300 L730 110" stroke="#175c50" stroke-width="6"/><path d="M730 110 L875 110" stroke="#175c50" stroke-width="6"/>
-<text x="820" y="205" text-anchor="middle" font-family="system-ui,sans-serif" font-size="25" font-weight="700" fill="#175c50">w &gt; 0</text>
-<text x="820" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" fill="#175c50">keep positive-winding faces</text>
-<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6b6b65"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 430" role="img" aria-labelledby="title desc">
+  <title id="title">Schematic convolution method pipeline</title>
+  <desc id="desc">Counterclockwise polygon boundaries produce selected edge-vertex translations. Their intersections form a planar arrangement whose faces receive winding numbers. Positive-winding faces are retained.</desc>
+  <rect width="1040" height="430" rx="18" fill="#faf9f6"/>
+
+  <g font-family="system-ui,sans-serif" fill="#222" text-anchor="middle" font-size="21" font-weight="700">
+    <text x="115" y="42">1 · P, Q</text>
+    <text x="385" y="42">2 · P * Q</text>
+    <text x="665" y="42">3 · DCEL + w</text>
+    <text x="925" y="42">4 · P ⊕ Q</text>
+  </g>
+
+  <g transform="translate(34 92)">
+    <path d="M0 150 L48 20 L150 50 L118 158 L52 188 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
+    <path d="M145 205 H215 V275 H145 Z" transform="translate(0 -80)" fill="#f5dfc9" stroke="#b75d28" stroke-width="4"/>
+    <path d="M15 150 L63 20" stroke="#175c50" stroke-width="7"/>
+    <circle cx="180" cy="125" r="7" fill="#b75d28"/>
+  </g>
+
+  <g stroke="#6b6b65" stroke-width="3" fill="none">
+    <path d="M245 215 H278" marker-end="url(#arrow)"/>
+    <path d="M505 215 H538" marker-end="url(#arrow)"/>
+    <path d="M795 215 H828" marker-end="url(#arrow)"/>
+  </g>
+
+  <g transform="translate(285 78)" fill="none" stroke-width="3">
+    <path d="M10 245 L30 45 L195 65 L170 250 Z" stroke="#175c50"/>
+    <path d="M0 205 L125 35 L225 165 L90 285 Z" stroke="#b75d28"/>
+    <path d="M20 125 L205 245 M55 270 L210 70 M0 205 L225 165" stroke="#8a8174"/>
+    <circle cx="76" cy="102" r="5" fill="#fff" stroke="#6b6b65"/>
+    <circle cx="161" cy="217" r="5" fill="#fff" stroke="#6b6b65"/>
+  </g>
+
+  <g transform="translate(550 78)" fill="none" stroke-width="3">
+    <path d="M10 245 L30 45 L195 65 L170 250 Z" stroke="#175c50"/>
+    <path d="M0 205 L125 35 L225 165 L90 285 Z" stroke="#b75d28"/>
+    <path d="M20 125 L205 245 M55 270 L210 70 M0 205 L225 165" stroke="#8a8174"/>
+    <g fill="#fff" stroke="#6b6b65" stroke-width="1">
+      <circle cx="76" cy="102" r="5"/><circle cx="161" cy="217" r="5"/><circle cx="104" cy="180" r="5"/><circle cx="188" cy="148" r="5"/>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#493f36" stroke="none">
+      <text x="76" y="92">0</text><text x="125" y="145">1</text><text x="175" y="205">2</text><text x="92" y="242">1</text>
+    </g>
+  </g>
+
+  <g transform="translate(845 88)">
+    <path d="M5 235 L25 55 L118 62 L202 165 L162 268 L58 280 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
+    <path d="M70 138 L118 62 L165 120 L132 188 Z" fill="#f5dfc9" stroke="#b75d28" stroke-width="3"/>
+    <text x="105" y="225" text-anchor="middle" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#175c50">w &gt; 0</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6b6b65"/>
+    </marker>
+  </defs>
 </svg>
