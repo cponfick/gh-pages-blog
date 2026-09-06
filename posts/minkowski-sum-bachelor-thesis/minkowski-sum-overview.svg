@@ -1,20 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="title desc">
-  <title id="title">Minkowski sum of a triangle and a square</title>
-  <desc id="desc">A triangle and an axis-aligned square combine into a six-sided polygon. Every edge direction from both input shapes appears on the boundary of the sum.</desc>
-  <rect width="880" height="420" rx="18" fill="#faf9f6"/>
-  <text x="440" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="27" font-weight="700" fill="#222">A ⊕ B = {a + b | a ∈ A, b ∈ B}</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="title desc">
+  <title id="title">Minkowski sum of a trapezoid and a square</title>
+  <desc id="desc">A convex trapezoid and a square are shown separately. Their Minkowski sum is a six-sided polygon whose edge directions come from the two input polygons.</desc>
+  <rect width="960" height="400" rx="18" fill="#faf9f6"/>
+  <text x="480" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="27" font-weight="700" fill="#222">A ⊕ B = {a + b | a ∈ A, b ∈ B}</text>
 
-  <path d="M55 315 L155 125 L255 315 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
-  <text x="155" y="356" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#175c50">A</text>
+  <g transform="translate(45 65)">
+    <path d="M35 110 H155 L125 190 H65 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
+    <g fill="#175c50">
+      <circle cx="35" cy="110" r="5"/><circle cx="155" cy="110" r="5"/>
+      <circle cx="125" cy="190" r="5"/><circle cx="65" cy="190" r="5"/>
+    </g>
+    <text x="95" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#175c50">A</text>
+  </g>
 
-  <text x="300" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="38" fill="#6b6b65">⊕</text>
+  <text x="285" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="38" fill="#6b6b65">⊕</text>
 
-  <rect x="345" y="210" width="70" height="70" fill="#f2c9a5" stroke="#b75d28" stroke-width="4"/>
-  <text x="380" y="321" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#b75d28">B</text>
+  <g transform="translate(325 65)">
+    <rect x="20" y="125" width="70" height="70" fill="#f2c9a5" stroke="#b75d28" stroke-width="4"/>
+    <g fill="#b75d28">
+      <circle cx="20" cy="125" r="5"/><circle cx="90" cy="125" r="5"/>
+      <circle cx="90" cy="195" r="5"/><circle cx="20" cy="195" r="5"/>
+    </g>
+    <text x="55" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#b75d28">B</text>
+  </g>
 
-  <text x="465" y="235" text-anchor="middle" font-family="system-ui,sans-serif" font-size="38" fill="#6b6b65">=</text>
+  <text x="465" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="38" fill="#6b6b65">=</text>
 
-  <path d="M525 315 L625 125 L695 125 L795 315 L795 385 L525 385 Z" fill="#e9dfcd" stroke="#175c50" stroke-width="4"/>
-  <path d="M625 125 H695 M795 315 V385 M795 385 H525 M525 385 V315" fill="none" stroke="#b75d28" stroke-width="5"/>
-  <text x="660" y="355" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#493f36">A ⊕ B</text>
+  <g transform="translate(540 45)">
+    <!-- Exact convex hull of all 4 × 4 displayed vertex sums, translated for layout. -->
+    <path d="M35 110 H225 V180 L195 260 H65 L35 180 Z" fill="#e9dfcd" stroke="#493f36" stroke-width="4"/>
+    <!-- Directions inherited from A. -->
+    <path d="M35 110 H225 M225 180 L195 260 M195 260 H65 M65 260 L35 180" fill="none" stroke="#175c50" stroke-width="6"/>
+    <!-- B supplies the vertical direction and shares both horizontal directions with A. -->
+    <path d="M225 110 V180 M35 180 V110" fill="none" stroke="#b75d28" stroke-width="6"/>
+    <path d="M35 110 H225 M195 260 H65" fill="none" stroke="#b75d28" stroke-width="3" stroke-dasharray="10 8"/>
+    <text x="130" y="315" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#493f36">A ⊕ B</text>
+  </g>
+
+  <g transform="translate(805 112)" font-family="system-ui,sans-serif" font-size="16" fill="#493f36">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#175c50" stroke-width="5"/>
+    <text x="45" y="6">direction in A</text>
+    <line x1="0" y1="34" x2="35" y2="34" stroke="#b75d28" stroke-width="5"/>
+    <text x="45" y="40">direction in B</text>
+  </g>
 </svg>

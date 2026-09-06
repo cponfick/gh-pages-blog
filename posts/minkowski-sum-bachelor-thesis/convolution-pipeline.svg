@@ -1,52 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 430" role="img" aria-labelledby="title desc">
-  <title id="title">Schematic convolution method pipeline</title>
-  <desc id="desc">Counterclockwise polygon boundaries produce selected edge-vertex translations. Their intersections form a planar arrangement whose faces receive winding numbers. Positive-winding faces are retained.</desc>
-  <rect width="1040" height="430" rx="18" fill="#faf9f6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 430" role="img" aria-labelledby="title desc">
+  <title id="title">Convolution method from input polygons to Minkowski sum</title>
+  <desc id="desc">The concave polygon and square from Figure 5.1 of the thesis produce a self-intersecting convolution cycle. Splitting its crossing creates DCEL faces with winding numbers zero, one, and two. Keeping faces with positive winding number gives a solid Minkowski sum with a notch and no hole.</desc>
+  <rect width="1120" height="430" rx="18" fill="#faf9f6"/>
 
-  <g font-family="system-ui,sans-serif" fill="#222" text-anchor="middle" font-size="21" font-weight="700">
-    <text x="115" y="42">1 · P, Q</text>
-    <text x="385" y="42">2 · P * Q</text>
-    <text x="665" y="42">3 · DCEL + w</text>
-    <text x="925" y="42">4 · P ⊕ Q</text>
+  <g font-family="system-ui,sans-serif" fill="#222" text-anchor="middle" font-size="20" font-weight="700">
+    <text x="125" y="42">1 · P and Q</text>
+    <text x="405" y="42">2 · convolution P * Q</text>
+    <text x="710" y="42">3 · split edges and label faces</text>
+    <text x="995" y="42">4 · P ⊕ Q</text>
   </g>
 
-  <g transform="translate(34 92)">
-    <path d="M0 150 L48 20 L150 50 L118 158 L52 188 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
-    <path d="M145 205 H215 V275 H145 Z" transform="translate(0 -80)" fill="#f5dfc9" stroke="#b75d28" stroke-width="4"/>
-    <path d="M15 150 L63 20" stroke="#175c50" stroke-width="7"/>
-    <circle cx="180" cy="125" r="7" fill="#b75d28"/>
+  <!-- The input pair used in thesis Figures 5.1, 5.5, and 5.6. -->
+  <g transform="translate(35 95)" stroke-width="4">
+    <path d="M15 225 L85 190 L155 225 L155 85 L15 85 Z" fill="#d9eee9" stroke="#175c50"/>
+    <path d="M180 155 H235 V100 H180 Z" fill="#f2c9a5" stroke="#b75d28"/>
+    <text x="85" y="270" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" font-weight="700" fill="#175c50">P</text>
+    <text x="208" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="21" font-weight="700" fill="#b75d28">Q</text>
   </g>
 
   <g stroke="#6b6b65" stroke-width="3" fill="none">
-    <path d="M245 215 H278" marker-end="url(#arrow)"/>
-    <path d="M505 215 H538" marker-end="url(#arrow)"/>
-    <path d="M795 215 H828" marker-end="url(#arrow)"/>
+    <path d="M270 215 H295" marker-end="url(#arrow)"/>
+    <path d="M540 215 H565" marker-end="url(#arrow)"/>
+    <path d="M855 215 H880" marker-end="url(#arrow)"/>
   </g>
 
-  <g transform="translate(285 78)" fill="none" stroke-width="3">
-    <path d="M10 245 L30 45 L195 65 L170 250 Z" stroke="#175c50"/>
-    <path d="M0 205 L125 35 L225 165 L90 285 Z" stroke="#b75d28"/>
-    <path d="M20 125 L205 245 M55 270 L210 70 M0 205 L225 165" stroke="#8a8174"/>
-    <circle cx="76" cy="102" r="5" fill="#fff" stroke="#6b6b65"/>
-    <circle cx="161" cy="217" r="5" fill="#fff" stroke="#6b6b65"/>
+  <!-- Exact translated-edge sequence of the convolution cycle in thesis Figure 5.1. -->
+  <g transform="translate(310 75)" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-width="4">
+    <path d="M0 285 L70 285" stroke="#b75d28"/>
+    <path d="M70 285 L140 250" stroke="#175c50"/>
+    <path d="M140 250 L140 180 L70 180 L70 250" stroke="#b75d28"/>
+    <path d="M70 250 L140 285" stroke="#175c50"/>
+    <path d="M140 285 L210 285 L210 180 L210 110 L140 110" stroke="#b75d28"/>
+    <path d="M140 110 L0 110" stroke="#175c50"/>
+    <path d="M0 110 L0 180 L0 285" stroke="#b75d28"/>
+    <circle cx="105" cy="267.5" r="6" fill="#fff" stroke="#493f36" stroke-width="3"/>
+    <text x="105" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#493f36" stroke="none">one closed, self-intersecting cycle</text>
   </g>
 
-  <g transform="translate(550 78)" fill="none" stroke-width="3">
-    <path d="M10 245 L30 45 L195 65 L170 250 Z" stroke="#175c50"/>
-    <path d="M0 205 L125 35 L225 165 L90 285 Z" stroke="#b75d28"/>
-    <path d="M20 125 L205 245 M55 270 L210 70 M0 205 L225 165" stroke="#8a8174"/>
-    <g fill="#fff" stroke="#6b6b65" stroke-width="1">
-      <circle cx="76" cy="102" r="5"/><circle cx="161" cy="217" r="5"/><circle cx="104" cy="180" r="5"/><circle cx="188" cy="148" r="5"/>
+  <!-- The same arrangement after splitting the crossing. -->
+  <g transform="translate(585 75)" stroke-linejoin="round" stroke-width="3">
+    <path d="M0 285 L70 285 L105 267.5 L140 285 L210 285 L210 110 L0 110 Z" fill="#d9eee9" stroke="#175c50"/>
+    <path d="M105 267.5 L140 250 L140 180 L70 180 L70 250 Z" fill="#f2c9a5" stroke="#b75d28"/>
+    <path d="M70 285 L140 250 M70 250 L140 285" fill="none" stroke="#493f36"/>
+    <circle cx="105" cy="267.5" r="5" fill="#fff" stroke="#493f36"/>
+    <g font-family="system-ui,sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#493f36">
+      <text x="105" y="90">w = 0</text>
+      <text x="105" y="155">w = 1</text>
+      <text x="105" y="225">w = 2</text>
     </g>
-    <g font-family="system-ui,sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#493f36" stroke="none">
-      <text x="76" y="92">0</text><text x="125" y="145">1</text><text x="175" y="205">2</text><text x="92" y="242">1</text>
-    </g>
   </g>
 
-  <g transform="translate(845 88)">
-    <path d="M5 235 L25 55 L118 62 L202 165 L162 268 L58 280 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4"/>
-    <path d="M70 138 L118 62 L165 120 L132 188 Z" fill="#f5dfc9" stroke="#b75d28" stroke-width="3"/>
-    <text x="105" y="225" text-anchor="middle" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#175c50">w &gt; 0</text>
+  <!-- Union of all positive-winding faces. The w=2 face is filled, not a hole. -->
+  <g transform="translate(890 75)">
+    <path d="M0 285 L70 285 L105 267.5 L140 285 L210 285 L210 110 L0 110 Z" fill="#d9eee9" stroke="#175c50" stroke-width="4" stroke-linejoin="round"/>
+    <text x="105" y="205" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="#175c50">w &gt; 0</text>
+    <text x="105" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#493f36">union of positive-winding faces</text>
   </g>
 
   <defs>
