@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 380" role="img" aria-labelledby="title desc">
+  <title id="title">A fixed precision grid can merge distinct coordinates</title>
+  <desc id="desc">Two distinct points A and B lie near the same grid intersection in the left panel. In the right panel, both are deliberately snapped to one grid vertex. This illustrates that fixed-grid semantics change the geometry rather than merely comparing nearby points approximately.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#65747a"/></marker>
+  </defs>
+  <rect width="1120" height="380" rx="18" fill="#faf9f6"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="35" y="42" fill="#253b43" font-size="24" font-weight="700">A grid changes what counts as the same point</text>
+    <text x="35" y="67" fill="#50636b" font-size="15">Two distinct coordinates can map to a single grid vertex.</text>
+    <rect x="35" y="90" width="487" height="245" rx="13" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <rect x="598" y="90" width="487" height="245" rx="13" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <text x="55" y="121" fill="#253b43" font-size="19" font-weight="700">Original coordinates</text>
+    <text x="618" y="121" fill="#253b43" font-size="19" font-weight="700">After snapping to a grid</text>
+    <!-- Grid origins are aligned to each panel's local point positions. -->
+    <g fill="none" stroke="#ccd8d3" stroke-width="2">
+      <path d="M65 135 V295 M145 135 V295 M225 135 V295 M305 135 V295 M385 135 V295 M465 135 V295 M65 135 H465 M65 215 H465 M65 295 H465"/>
+      <path d="M628 135 V295 M708 135 V295 M788 135 V295 M868 135 V295 M948 135 V295 M1028 135 V295 M628 135 H1028 M628 215 H1028 M628 295 H1028"/>
+    </g>
+    <circle cx="145" cy="215" r="5" fill="#a0afa9"/>
+    <circle cx="708" cy="215" r="5" fill="#a0afa9"/>
+    <circle cx="129" cy="199" r="8" fill="#175c50"/>
+    <circle cx="163" cy="201" r="8" fill="#b1532d"/>
+    <text x="100" y="186" fill="#175c50" font-size="17" font-weight="700">A</text>
+    <text x="169" y="190" fill="#b1532d" font-size="17" font-weight="700">B</text>
+    <path d="M535 208 H583" fill="none" stroke="#65747a" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="708" cy="215" r="13" fill="#fff" stroke="#175c50" stroke-width="4"/>
+    <circle cx="708" cy="215" r="5" fill="#b1532d"/>
+    <text x="738" y="221" fill="#253b43" font-size="17" font-weight="600">A and B share a vertex</text>
+    <text x="55" y="321" fill="#50636b" font-size="14">Two points before reduction</text>
+    <text x="618" y="321" fill="#50636b" font-size="14">One point in the reduced geometry</text>
+    <text x="35" y="362" fill="#50636b" font-size="14">This is a simplified point example. Topology-preserving reduction of lines or polygons needs additional rules.</text>
+  </g>
+</svg>

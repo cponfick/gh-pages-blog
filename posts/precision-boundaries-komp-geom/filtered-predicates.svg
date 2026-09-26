@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 370" role="img" aria-labelledby="title desc">
+  <title id="title">A filtered predicate certifies easy signs and refines uncertain ones</title>
+  <desc id="desc">Two number lines show possible results after allowing for rounding error. On the left, every possible value is above zero, so the positive answer is safe. On the right, zero lies among the possible values, so the calculation must be refined before deciding. The error bound is not a user-chosen tolerance.</desc>
+  <rect width="1120" height="370" rx="18" fill="#faf9f6"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="35" y="43" font-size="25" font-weight="700" fill="#253b43">Filtered predicates: fast when safe, precise when needed</text>
+    <text x="35" y="69" font-size="15" fill="#50636b">A bound on rounding error tells us whether an answer is safely above or below zero.</text>
+    <rect x="35" y="91" width="495" height="220" rx="14" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <rect x="590" y="91" width="495" height="220" rx="14" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <text x="57" y="124" font-size="20" font-weight="700" fill="#253b43">Easy case: sign certified</text>
+    <text x="612" y="124" font-size="20" font-weight="700" fill="#253b43">Boundary case: sign uncertain</text>
+
+    <path d="M85 194 H485 M640 194 H1040" fill="none" stroke="#65747a" stroke-width="3"/>
+    <path d="M172 182 V206 M850 182 V206" stroke="#253b43" stroke-width="3"/>
+    <text x="172" y="229" text-anchor="middle" font-size="16" fill="#253b43">0</text>
+    <text x="850" y="229" text-anchor="middle" font-size="16" fill="#253b43">0</text>
+
+    <rect x="283" y="173" width="66" height="42" rx="8" fill="#e4f1ed" stroke="#175c50" stroke-width="2"/>
+    <circle cx="316" cy="194" r="6" fill="#175c50"/>
+    <rect x="816" y="173" width="68" height="42" rx="8" fill="#fff1e2" stroke="#b1532d" stroke-width="2"/>
+    <circle cx="854" cy="194" r="6" fill="#b1532d"/>
+
+    <text x="57" y="266" font-size="16" font-weight="600" fill="#175c50">All possible values are positive → accept</text>
+    <text x="612" y="266" font-size="16" font-weight="600" fill="#b1532d">Zero is possible → calculate more carefully</text>
+    <text x="35" y="347" font-size="14" fill="#50636b">The boxes show possible rounding error, not an application-defined tolerance.</text>
+  </g>
+</svg>

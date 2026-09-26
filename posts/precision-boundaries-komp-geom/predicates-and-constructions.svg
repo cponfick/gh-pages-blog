@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 355" role="img" aria-labelledby="title desc">
+  <title id="title">A correct geometric decision is not necessarily an exact constructed coordinate</title>
+  <desc id="desc">A diagram separates three stages. A robust predicate decides whether two segments intersect. The algorithm keeps an internally consistent representation of the intersection for later event and incidence decisions. An approximate Vec2 point may be returned for display, but must not be treated as an exact event key.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#65747a"/></marker>
+  </defs>
+  <rect width="1120" height="355" rx="18" fill="#faf9f6"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="35" y="44" fill="#253b43" font-size="24" font-weight="700">A decision and a coordinate are different results</text>
+    <text x="35" y="69" fill="#50636b" font-size="15">Illustrative design: a correct classification does not make a rounded output point exact.</text>
+    <g stroke-width="2">
+      <rect x="35" y="94" width="323" height="206" rx="13" fill="#fff" stroke="#d5ddd9"/>
+      <rect x="397" y="94" width="323" height="206" rx="13" fill="#e4f1ed" stroke="#afcec4"/>
+      <rect x="759" y="94" width="326" height="206" rx="13" fill="#fff5ea" stroke="#e2c4a9"/>
+    </g>
+    <g fill="none" stroke="#65747a" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M365 192 H385"/>
+      <path d="M727 192 H747"/>
+    </g>
+    <g font-size="19" font-weight="700" fill="#253b43">
+      <text x="56" y="128">Predicate</text>
+      <text x="418" y="128">Internal construction</text>
+      <text x="780" y="128">Reported coordinate</text>
+    </g>
+    <g stroke-width="4" stroke-linecap="round" fill="none">
+      <path d="M101 221 L254 151" stroke="#175c50"/>
+      <path d="M112 157 L252 231" stroke="#b1532d"/>
+    </g>
+    <circle cx="179" cy="185" r="7" fill="#253b43"/>
+    <text x="56" y="273" fill="#175c50" font-size="16" font-weight="600">Do they intersect? Yes.</text>
+    <circle cx="480" cy="183" r="10" fill="#fff" stroke="#175c50" stroke-width="3"/>
+    <path d="M480 195 V220 H609" stroke="#175c50" stroke-width="2" fill="none"/>
+    <text x="418" y="273" fill="#253b43" font-size="15">Keep decisions consistent.</text>
+    <text x="780" y="194" fill="#b1532d" font-size="26" font-weight="700">≈ (x, y)</text>
+    <text x="780" y="248" fill="#253b43" font-size="15">Useful for output, not an</text>
+    <text x="780" y="273" fill="#253b43" font-size="15">automatically exact key.</text>
+    <text x="35" y="331" fill="#50636b" font-size="14">The middle stage is a design requirement for algorithms that reuse constructed intersections, not a feature the library already guarantees.</text>
+  </g>
+</svg>

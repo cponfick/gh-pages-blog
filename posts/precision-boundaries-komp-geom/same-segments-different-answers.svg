@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 430" role="img" aria-labelledby="title desc">
+  <title id="title">Same segments, different answers</title>
+  <desc id="desc">The same two line segments cross near the green segment's endpoint in both panels. The pairwise test reports the intersection in the left panel. The sweep does not report the pair in the right panel. This is a schematic illustration with an exaggerated distance from the crossing to the endpoint.</desc>
+  <rect width="1120" height="430" rx="18" fill="#faf9f6"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="38" y="43" font-size="26" font-weight="700" fill="#253b43">Same segments. Different answers.</text>
+    <text x="38" y="69" font-size="16" fill="#50636b">A crossing close to an endpoint can expose a disagreement between two algorithms.</text>
+
+    <rect x="38" y="90" width="493" height="282" rx="15" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <rect x="589" y="90" width="493" height="282" rx="15" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <text x="62" y="125" font-size="20" font-weight="700" fill="#253b43">Pairwise intersection</text>
+    <text x="613" y="125" font-size="20" font-weight="700" fill="#253b43">Sweep-line report</text>
+
+    <!-- Both panels show identical input geometry, translated horizontally. -->
+    <g fill="none" stroke-width="6" stroke-linecap="round">
+      <path d="M132 286 L408 157" stroke="#175c50"/>
+      <path d="M401 133 V304" stroke="#b1532d"/>
+      <path d="M683 286 L959 157" stroke="#175c50"/>
+      <path d="M952 133 V304" stroke="#b1532d"/>
+    </g>
+    <g fill="#175c50"><circle cx="408" cy="157" r="6"/><circle cx="959" cy="157" r="6"/></g>
+
+    <!-- Marker denotes reported output, not whether the drawn segments physically cross. -->
+    <circle cx="401" cy="160" r="14" fill="#fff" stroke="#175c50" stroke-width="3"/>
+    <path d="M395 160 L400 165 L408 155" fill="none" stroke="#175c50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="952" cy="160" r="14" fill="#fff" stroke="#b1532d" stroke-width="3" stroke-dasharray="4 4"/>
+
+    <text x="62" y="330" font-size="19" font-weight="700" fill="#175c50">Intersection reported</text>
+    <text x="613" y="330" font-size="19" font-weight="700" fill="#b1532d">Pair missing from output</text>
+    <text x="38" y="408" font-size="15" fill="#50636b">Schematic: the circles mark what each method reports, not whether the segments cross.</text>
+  </g>
+</svg>

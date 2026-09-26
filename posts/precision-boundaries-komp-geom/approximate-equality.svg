@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">Approximate equality is not transitive</title>
+  <desc id="desc">Three points a, b and c on a number line are spaced three quarters of epsilon apart. a is close to b and b is close to c, but a is not close to c.</desc>
+  <rect width="960" height="300" rx="18" fill="#faf9f6"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="40" y="43" font-size="24" font-weight="700" fill="#253b43">Close to a neighbor does not mean identical</text>
+    <text x="40" y="69" font-size="15" fill="#4b6068">Near zero, ε = 10⁻⁸. Horizontal spacing shows differences, not floating-point representation.</text>
+    <path d="M115 166 H855" stroke="#65747a" stroke-width="3"/>
+    <path d="M150 150 V180 M440 150 V180 M730 150 V180" stroke="#253b43" stroke-width="3"/>
+    <g fill="#175c50">
+      <circle cx="150" cy="166" r="8"/><circle cx="440" cy="166" r="8"/><circle cx="730" cy="166" r="8"/>
+    </g>
+    <g font-size="18" fill="#253b43" text-anchor="middle">
+      <text x="150" y="212">a = 0</text>
+      <text x="440" y="212">b = 0.75ε</text>
+      <text x="730" y="212">c = 1.5ε</text>
+    </g>
+    <path d="M150 137 V123 H440 V137 M440 137 V123 H730 V137" fill="none" stroke="#175c50" stroke-width="3"/>
+    <text x="295" y="116" font-size="15" font-weight="600" fill="#175c50" text-anchor="middle">a ≈ b</text>
+    <text x="585" y="116" font-size="15" font-weight="600" fill="#175c50" text-anchor="middle">b ≈ c</text>
+    <path d="M150 225 V245 H730 V225" fill="none" stroke="#b1532d" stroke-width="3"/>
+    <text x="440" y="272" font-size="16" font-weight="700" fill="#b1532d" text-anchor="middle">a ≉ c: the gap is 1.5ε</text>
+  </g>
+</svg>

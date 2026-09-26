@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 490" role="img" aria-labelledby="title desc">
+  <title id="title">A pairwise intersection and a sweep event can disagree near an endpoint</title>
+  <desc id="desc">Two schematic panels show the same near-endpoint crossing. The pairwise test classifies a contact at P. In a possible failure chain, the constructed event coordinate is displaced beyond the short segment's endpoint and a later incidence check rejects it. The displacement is exaggerated to illustrate a possible disagreement, not a measured trace.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#596d77"/></marker>
+  </defs>
+  <rect width="1120" height="490" rx="18" fill="#faf9f6"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="35" y="44" fill="#253b43" font-size="25" font-weight="700">One crossing, two decisions</text>
+    <text x="35" y="70" fill="#50636b" font-size="15">A conceptual failure chain near an endpoint, with displacement exaggerated for clarity</text>
+    <rect x="35" y="92" width="495" height="342" rx="15" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <rect x="590" y="92" width="495" height="342" rx="15" fill="#fff" stroke="#d5ddd9" stroke-width="2"/>
+    <text x="58" y="126" fill="#253b43" font-size="20" font-weight="700">1. Pairwise classification</text>
+    <text x="613" y="126" fill="#253b43" font-size="20" font-weight="700">2. Sweep-event incidence</text>
+    <g stroke-width="6" stroke-linecap="round" fill="none">
+      <path d="M100 320 L375 172" stroke="#175c50"/>
+      <path d="M370 145 L370 340" stroke="#b1532d"/>
+      <path d="M670 320 L945 172" stroke="#175c50"/>
+      <path d="M940 145 L940 340" stroke="#b1532d"/>
+    </g>
+    <g fill="#175c50"><circle cx="375" cy="172" r="6"/><circle cx="945" cy="172" r="6"/></g>
+    <circle cx="370" cy="175" r="11" fill="#fff" stroke="#253b43" stroke-width="3"/>
+    <text x="405" y="171" fill="#253b43" font-size="16" font-weight="700">P</text>
+    <text x="58" y="377" fill="#253b43" font-size="17" font-weight="600">Pair is classified as intersecting</text>
+    <text x="58" y="402" fill="#50636b" font-size="15">Intersection coordinate is then constructed</text>
+    <path d="M540 251 H576" fill="none" stroke="#596d77" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="940" cy="175" r="9" fill="#fff" stroke="#596d77" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M952 175 H963" stroke="#b1532d" stroke-width="2" stroke-dasharray="3 3"/>
+    <circle cx="965" cy="175" r="8" fill="#b1532d"/>
+    <path d="M965 191 V300" fill="none" stroke="#b1532d" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="782" y="235" fill="#b1532d" font-size="16" font-weight="600">computed event E</text>
+    <path d="M935 228 L960 186" fill="none" stroke="#b1532d" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="613" y="377" fill="#253b43" font-size="17" font-weight="600">Incidence check may reject E</text>
+    <text x="613" y="402" fill="#50636b" font-size="15">E falls beyond the green segment's endpoint</text>
+    <text x="35" y="467" fill="#50636b" font-size="14">Illustrative only: the displacement is exaggerated to show how two decisions can disagree.</text>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 390" role="img" aria-labelledby="title desc">
+  <title id="title">Precision decisions affect many geometric algorithms</title>
+  <desc id="desc">Three examples share a precision-contract foundation. An orientation decision controls whether a point belongs to a convex hull, an incidence decision controls whether edges share a vertex in an arrangement, and an event-order decision controls which segments become neighbors in a sweep.</desc>
+  <rect width="1120" height="390" rx="18" fill="#faf9f6"/>
+  <g font-family="system-ui,sans-serif">
+    <text x="36" y="44" font-size="25" font-weight="700" fill="#253b43">One precision boundary, different consequences</text>
+    <g stroke="#d5ddd9" stroke-width="2" fill="#fff">
+      <rect x="35" y="70" width="338" height="235" rx="14"/>
+      <rect x="391" y="70" width="338" height="235" rx="14"/>
+      <rect x="747" y="70" width="338" height="235" rx="14"/>
+    </g>
+    <g font-size="19" font-weight="700" fill="#253b43">
+      <text x="56" y="106">Convex hull</text>
+      <text x="412" y="106">Polygon arrangement</text>
+      <text x="768" y="106">Segment sweep</text>
+    </g>
+    <!-- Near-collinear hull turn: the point marked with a ring may be retained or discarded. -->
+    <path d="M82 194 L175 166 L284 137" stroke="#175c50" stroke-width="4" fill="none"/>
+    <g fill="#175c50"><circle cx="82" cy="194" r="5"/><circle cx="284" cy="137" r="5"/></g>
+    <circle cx="175" cy="166" r="10" fill="#fff" stroke="#b1532d" stroke-width="3"/>
+    <text x="56" y="254" font-size="16" font-weight="600" fill="#253b43">Orientation sign</text>
+    <text x="56" y="278" font-size="14" fill="#50636b">Keep or discard a hull vertex?</text>
+    <!-- Arrangement: contact determines whether edges share one vertex. -->
+    <path d="M447 194 H667 M555 137 V228" stroke="#175c50" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="555" cy="194" r="10" fill="#fff" stroke="#b1532d" stroke-width="3"/>
+    <text x="412" y="254" font-size="16" font-weight="600" fill="#253b43">Incidence</text>
+    <text x="412" y="278" font-size="14" fill="#50636b">Do edges share a vertex?</text>
+    <!-- Sweep: event order controls active-neighbor checks. -->
+    <path d="M795 205 L990 142 M795 143 L990 213" fill="none" stroke="#175c50" stroke-width="4" stroke-linecap="round"/>
+    <path d="M904 127 V230" stroke="#b1532d" stroke-width="2" stroke-dasharray="6 5"/>
+    <circle cx="904" cy="177" r="8" fill="#fff" stroke="#b1532d" stroke-width="3"/>
+    <text x="768" y="254" font-size="16" font-weight="600" fill="#253b43">Event order</text>
+    <text x="768" y="278" font-size="14" fill="#50636b">Which segments become neighbors?</text>
+    <path d="M204 306 V325 M560 306 V325 M916 306 V325" stroke="#65747a" stroke-width="2"/>
+    <rect x="35" y="325" width="1050" height="48" rx="10" fill="#e4f1ed" stroke="#afcec4" stroke-width="2"/>
+    <text x="560" y="355" font-size="18" font-weight="700" text-anchor="middle" fill="#175c50">A shared precision contract for topology-changing decisions</text>
+  </g>
+</svg>
